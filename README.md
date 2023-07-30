@@ -18,7 +18,7 @@ Esse projeto utiliza Expo CLI para melhor execução e configuração do ambient
 Para iniciar o Aplicativo faça:
 --------------------------------------
 
-Clone o Repositório e abra o terminal na parta raiz (/Reservou) e execute o comando 
+Clone o Repositório e abra o terminal na parta raiz e execute o comando 
 
   `npm install`
 
