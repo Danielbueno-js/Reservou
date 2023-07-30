@@ -5,7 +5,6 @@ const data = [
   { id: 1, image: require('../assets/pizza.png'), label: 'Pizzaria' },
   { id: 2, image: require('../assets/restaurante.png'), label: 'Restaurantes' },
   { id: 3, image: require('../assets/esporte.png'), label: 'Esportes' },
-  // Adicione mais itens de acordo com suas necessidades
 ];
 
 const CarouselComponent = () => {

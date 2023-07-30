@@ -9,7 +9,6 @@ const LoginScreen = ({ navigation }) => {
   const [passwordError, setPasswordError] = useState('');
 
   const handleLogin = () => {
-  //-------------------------------------------------campos obrigatórios
     if (!email.trim()) {
       setEmailError('O e-mail é obrigatório');
       return;
@@ -24,7 +23,6 @@ const LoginScreen = ({ navigation }) => {
       setPasswordError('');
     }
 
-    //------------------------------------------------Verificação do formato de e-mail
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       setEmailError('E-mail inválido');
@@ -33,7 +31,6 @@ const LoginScreen = ({ navigation }) => {
       setEmailError('');
     }
 
-    //-------------------------------------------------Verificação dos requisitos mínimos da senha
     if (password.length < 6) {
       setPasswordError('A senha deve ter pelo menos 6 caracteres');
       return;
@@ -46,16 +43,11 @@ const LoginScreen = ({ navigation }) => {
     console.log('Senha:', password);
 
     navigation.navigate('Home');
-
   };
 
-  const handleForgotPassword = () => {
-    
-  };
+  const handleForgotPassword = () => {};
 
-  const handleCreateAccount = () => {
-   
-  };
+  const handleCreateAccount = () => {};
 
   return (
     <View style={styles.container}>
@@ -88,10 +80,7 @@ const LoginScreen = ({ navigation }) => {
         />
         {!!passwordError && <Text style={styles.errorText}>{passwordError}</Text>}
       </View>
-      <Button
-        onPress={handleForgotPassword}
-        labelStyle={styles.forgotPasswordText}
-      >
+      <Button onPress={handleForgotPassword} labelStyle={styles.forgotPasswordText}>
         Esqueceu sua senha? <Text style={styles.clickHereText}>Clique aqui</Text>
       </Button>
       <View style={styles.buttonContainer}>
@@ -127,6 +116,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     paddingHorizontal: 20,
+    marginBottom: -100,
   },
   iconContainer: {
     alignItems: 'center',
@@ -135,10 +125,11 @@ const styles = StyleSheet.create({
   icon: {
     width: 100,
     height: 100,
-    marginBottom: 10,
+    marginBottom: 100,
   },
   labelContainer: {
     marginBottom: 10,
+    marginTop: 0,
   },
   label: {
     fontSize: 16,
@@ -155,6 +146,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     paddingVertical: 12,
     backgroundColor: '#FFD700',
+    marginTop: 80,
   },
   loginButtonLabel: {
     fontSize: 16,
@@ -164,19 +156,21 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     paddingVertical: 12,
     borderWidth: 1,
-    borderColor: '#ccc', 
+    borderColor: '#ccc',
     backgroundColor: 'transparent',
   },
   createAccountButtonLabel: {
     fontSize: 16,
-    color: '#888', 
+    color: '#888',
   },
   forgotPasswordText: {
-    color: '#888', 
+    marginTop: -5,
+    marginRight: 128,
+    color: '#888',
   },
   clickHereText: {
-    color: '#FFD700', 
-    textDecorationLine: 'underline', 
+    color: '#FFD700',
+    textDecorationLine: 'underline',
   },
 });
 
