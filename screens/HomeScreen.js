@@ -193,7 +193,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   bottomBar: {
-    height: 40,
+    height: 50,
     backgroundColor: '#FFD700',
     marginTop: 20,
     borderRadius: 20,
